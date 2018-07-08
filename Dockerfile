@@ -5,5 +5,3 @@ RUN pip install \
 	ConfigParser \
 	simplejson \
 	datetime
-
-# RUN easy_install hashlib
