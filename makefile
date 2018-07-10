@@ -1,7 +1,12 @@
 IMAGE ?= isocronut
+DCMD = docker run --rm -it -v $$(pwd):/home -w /home $(IMAGE) python
 
-docker: 
+docker.done:
 	docker build . --tag $(IMAGE)
+	touch docker.done
 
-run-docker: 
-	docker run --rm -it -v $$(pwd):/work $(IMAGE) /bin/sh
+run-docker: docker.done 
+	docker run --rm -it -v $$(pwd):/home -w /home $(IMAGE)  /bin/bash
+
+test: docker.done
+	$(DCMD) isocronut-test.py

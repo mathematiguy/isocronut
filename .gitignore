@@ -106,3 +106,6 @@ venv.bak/
 
 # Config files
 config/google_maps.cfg
+
+# Done files
+*.done

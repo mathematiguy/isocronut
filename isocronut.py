@@ -176,12 +176,12 @@ def geocode_address(address='',
     # Note that this URL should already be URL-encoded
     prefix = 'https://maps.googleapis.com/maps/api/geocode/json'
     if access_type == 'personal':
-        url = urlparse.urlparse('{0}?address={1}&key={2}'.format(prefix,
+        url = urlparse.urlparse('{0}?address={1}&key={2}&sensor=true'.format(prefix,
                                                                  address_str,
                                                                  key))
         full_url = url.scheme + '://' + url.netloc + url.path + '?' + url.query
     if access_type == 'business':
-        url = urlparse.urlparse('{0}?address={1}&client={2}'.format(prefix,
+        url = urlparse.urlparse('{0}?address={1}&client={2}&sensor=true'.format(prefix,
                                                                     address_str,
                                                                     client))
         # Get the private_key used to sign the API request
