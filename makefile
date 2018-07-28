@@ -9,4 +9,4 @@ run-docker: docker.done
 	docker run --rm -it -v $$(pwd):/home -w /home $(IMAGE)  /bin/bash
 
 test: docker.done
-	$(DCMD) isocronut-test.py
+	$(DCMD) isocronut.py
