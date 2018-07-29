@@ -109,3 +109,6 @@ config/google_maps.cfg
 
 # Done files
 *.done
+
+# jovyan user
+jovyan/

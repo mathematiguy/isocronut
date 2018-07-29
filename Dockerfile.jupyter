@@ -1,0 +1,5 @@
+FROM jupyter/scipy-notebook
+
+RUN pip install --upgrade pip	
+COPY notebooks/requirements.txt requirements.txt
+RUN pip install -r requirements.txt
